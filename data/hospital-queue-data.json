@@ -1,0 +1,1502 @@
+{
+  "departments": [
+    {
+      "id": "dept-gen",
+      "name": "General Medicine OPD",
+      "code": "GEN",
+      "avgConsultationMinutes": 10,
+      "location": "Floor 1, Block A, Rooms 101-104",
+      "iconName": "Stethoscope"
+    },
+    {
+      "id": "dept-cardio",
+      "name": "Cardiology Care",
+      "code": "CARD",
+      "avgConsultationMinutes": 15,
+      "location": "Floor 2, Block B, Rooms 201-203",
+      "iconName": "HeartPulse"
+    },
+    {
+      "id": "dept-ped",
+      "name": "Pediatrics Clinic",
+      "code": "PED",
+      "avgConsultationMinutes": 12,
+      "location": "Floor 1, Block C, Child Wellness Wing",
+      "iconName": "Baby"
+    },
+    {
+      "id": "dept-ortho",
+      "name": "Orthopedics & Trauma",
+      "code": "ORTH",
+      "avgConsultationMinutes": 15,
+      "location": "Floor 1, Block B, Rooms 110-112",
+      "iconName": "Bone"
+    },
+    {
+      "id": "dept-ent",
+      "name": "ENT Specialist Clinic",
+      "code": "ENT",
+      "avgConsultationMinutes": 10,
+      "location": "Floor 2, Block A, Rooms 208-210",
+      "iconName": "Ear"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "doc-1",
+      "name": "Dr. Rajesh Sharma, MD",
+      "specialty": "Senior General Physician",
+      "departmentId": "dept-gen",
+      "roomNumber": "Room 101",
+      "status": "AVAILABLE",
+      "currentTicketId": "ticket-1795184709527-0waeq",
+      "delayMinutes": 0,
+      "delayReason": ""
+    },
+    {
+      "id": "doc-2",
+      "name": "Dr. Priya Nambiar, MD, DM",
+      "specialty": "Consultant Cardiologist",
+      "departmentId": "dept-cardio",
+      "roomNumber": "Room 201",
+      "status": "AVAILABLE",
+      "currentTicketId": null,
+      "delayMinutes": 15,
+      "delayReason": "Emergency angioplasty review in CCU"
+    },
+    {
+      "id": "doc-3",
+      "name": "Dr. Vikram Malhotra, MD",
+      "specialty": "Pediatric Specialist",
+      "departmentId": "dept-ped",
+      "roomNumber": "Room 105",
+      "status": "AVAILABLE",
+      "currentTicketId": null,
+      "delayMinutes": 0,
+      "delayReason": ""
+    },
+    {
+      "id": "doc-4",
+      "name": "Dr. Ananya Roy, MS",
+      "specialty": "Orthopedic Surgeon",
+      "departmentId": "dept-ortho",
+      "roomNumber": "Room 110",
+      "status": "AVAILABLE",
+      "currentTicketId": "ticket-demo-2",
+      "delayMinutes": 0,
+      "delayReason": "Emergency clinical review"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "ticket-demo-1",
+      "ticketNumber": "GEN-101",
+      "patientName": "Ramesh Gupta",
+      "age": 58,
+      "gender": "Male",
+      "contactNumber": "+91 98201 12345",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "Flu symptoms, severe body ache for 3 days",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T06:00:56.646Z",
+      "calledTime": "2026-11-19T06:30:56.646Z",
+      "startTime": "2026-11-19T06:32:56.646Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "doctorNotes": "BP 130/85, checking chest congestion",
+      "completedTime": "2026-11-19T07:00:21.886Z"
+    },
+    {
+      "id": "ticket-demo-2",
+      "ticketNumber": "ORTH-201",
+      "patientName": "Sunita Mehra",
+      "age": 67,
+      "gender": "Female",
+      "contactNumber": "+91 98112 56789",
+      "departmentId": "dept-ortho",
+      "doctorId": "doc-4",
+      "priority": "SENIOR_CITIZEN",
+      "chiefComplaint": "Right wrist fracture post-slip, swelling",
+      "status": "IN_CONSULTATION",
+      "checkInTime": "2026-11-19T06:05:56.646Z",
+      "calledTime": "2026-11-19T06:28:56.646Z",
+      "startTime": "2026-11-19T06:30:56.646Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "smsNotification": {
+        "status": "SENT",
+        "recipientNumber": "9811256789",
+        "messageText": "Hello Sunita Mehra, your registration is successful! Your Token Number is ORTH-201. Doctor: Dr. Ananya Roy, MS. Date: 19 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "PulseQueue SMS Engine (Fast2SMS/MSG91 Ready)",
+        "messageId": "mock-sms-1795160502474-b4vu",
+        "sentAt": "2026-11-20T07:41:42.474Z",
+        "retryCount": 1
+      }
+    },
+    {
+      "id": "ticket-demo-3",
+      "ticketNumber": "GEN-102",
+      "patientName": "Aarav Verma",
+      "age": 24,
+      "gender": "Male",
+      "contactNumber": "+91 97234 44556",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "Allergic rash and mild shortness of breath",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T06:15:56.646Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "calledTime": "2026-11-19T07:00:33.540Z",
+      "completedTime": "2026-11-19T07:00:44.247Z"
+    },
+    {
+      "id": "ticket-demo-4",
+      "ticketNumber": "CARD-301",
+      "patientName": "Deepak Joshi",
+      "age": 62,
+      "gender": "Male",
+      "contactNumber": "+91 99100 88776",
+      "departmentId": "dept-cardio",
+      "doctorId": "doc-2",
+      "priority": "URGENT",
+      "chiefComplaint": "Palpitations, chest tightness on exertion",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T06:20:56.646Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "calledTime": "2026-11-19T07:03:09.184Z",
+      "completedTime": "2026-11-20T07:04:17.567Z"
+    },
+    {
+      "id": "ticket-demo-5",
+      "ticketNumber": "PED-401",
+      "patientName": "Anvi Deshmukh",
+      "age": 5,
+      "gender": "Female",
+      "contactNumber": "+91 98980 11223",
+      "departmentId": "dept-ped",
+      "doctorId": "doc-3",
+      "priority": "NORMAL",
+      "chiefComplaint": "High fever 102°F and ear pain",
+      "status": "WAITING",
+      "checkInTime": "2026-11-19T06:25:56.646Z",
+      "estimatedWaitMinutes": 12,
+      "queuePosition": 1,
+      "smsNotification": {
+        "status": "SENT",
+        "recipientNumber": "9898011223",
+        "messageText": "Hello Anvi Deshmukh, your registration is successful! Your Token Number is PED-401. Doctor: Dr. Vikram Malhotra, MD. Date: 19 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "PulseQueue SMS Engine (Fast2SMS/MSG91 Ready)",
+        "messageId": "mock-sms-1795160504366-99ix",
+        "sentAt": "2026-11-20T07:41:44.366Z",
+        "retryCount": 1
+      }
+    },
+    {
+      "id": "ticket-demo-6",
+      "ticketNumber": "GEN-103",
+      "patientName": "Kavita Iyer",
+      "age": 72,
+      "gender": "Female",
+      "contactNumber": "+91 98331 99001",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "SENIOR_CITIZEN",
+      "chiefComplaint": "Uncontrolled diabetes checkup, dizziness",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T06:30:56.646Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "calledTime": "2026-11-19T07:00:21.886Z",
+      "completedTime": "2026-11-19T07:00:33.540Z"
+    },
+    {
+      "id": "ticket-1795094210328-m0chs",
+      "ticketNumber": "GEN-104",
+      "patientName": "Arjun Kapoor",
+      "age": 46,
+      "gender": "Male",
+      "contactNumber": "+91 98765 11223",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "Mild seasonal allergies and headache",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T13:16:50.328Z",
+      "calledTime": "2026-11-19T16:01:05.488Z",
+      "startTime": null,
+      "completedTime": "2026-11-20T05:12:25.143Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0
+    },
+    {
+      "id": "ticket-1795094212497-xmho7",
+      "ticketNumber": "GEN-105",
+      "patientName": "Devendra Singhania (CRITICAL)",
+      "age": 56,
+      "gender": "Male",
+      "contactNumber": "+91 99999 10800",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "EMERGENCY",
+      "chiefComplaint": "Acute chest pain radiating to left arm, sweating, BP 160/100",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T13:16:52.497Z",
+      "calledTime": "2026-11-19T15:52:33.627Z",
+      "startTime": null,
+      "completedTime": "2026-11-19T16:01:05.485Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0
+    },
+    {
+      "id": "ticket-1795094969556-jrxgp",
+      "ticketNumber": "GEN-106",
+      "patientName": "Rohit Sen",
+      "age": 42,
+      "gender": "Male",
+      "contactNumber": "+91 98765 11223",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "Mild seasonal allergies and headache",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T13:29:29.556Z",
+      "calledTime": "2026-11-20T05:12:25.144Z",
+      "startTime": null,
+      "completedTime": "2026-11-20T05:16:26.078Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0
+    },
+    {
+      "id": "ticket-1795095375764-2zihs",
+      "ticketNumber": "GEN-107",
+      "patientName": "Rohit Sen",
+      "age": 64,
+      "gender": "Male",
+      "contactNumber": "+91 98765 11223",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "Mild seasonal allergies and headache",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-19T13:36:15.764Z",
+      "calledTime": "2026-11-20T05:16:26.079Z",
+      "startTime": null,
+      "completedTime": "2026-11-20T05:55:04.242Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0
+    },
+    {
+      "id": "ticket-1795154059901-znxfd",
+      "ticketNumber": "GEN-108",
+      "patientName": "Lucky kumar",
+      "age": 21,
+      "gender": "Male",
+      "contactNumber": "9732867326",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "EMERGENCY",
+      "chiefComplaint": "jaundees",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-20T05:54:19.901Z",
+      "calledTime": "2026-11-20T05:55:04.242Z",
+      "startTime": null,
+      "completedTime": "2026-11-20T05:55:15.390Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0
+    },
+    {
+      "id": "ticket-1795154290769-xh4b2",
+      "ticketNumber": "CARD-102",
+      "patientName": "Akshay Kumar",
+      "age": 21,
+      "gender": "Male",
+      "contactNumber": "6207427462",
+      "departmentId": "dept-cardio",
+      "doctorId": "doc-2",
+      "priority": "URGENT",
+      "chiefComplaint": "Leg Fracture",
+      "status": "NO_SHOW",
+      "checkInTime": "2026-11-20T05:58:10.769Z",
+      "calledTime": null,
+      "startTime": null,
+      "completedTime": null,
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0
+    },
+    {
+      "id": "ticket-1795154393079-ybjgd",
+      "ticketNumber": "ORTH-102",
+      "patientName": "Rahul Gupta",
+      "age": 70,
+      "gender": "Other",
+      "contactNumber": "9375322365",
+      "departmentId": "dept-ortho",
+      "doctorId": "doc-4",
+      "priority": "SENIOR_CITIZEN",
+      "chiefComplaint": "leg Fracture",
+      "status": "WAITING",
+      "checkInTime": "2026-11-20T05:59:53.079Z",
+      "calledTime": null,
+      "startTime": null,
+      "completedTime": null,
+      "estimatedWaitMinutes": 15,
+      "queuePosition": 1,
+      "smsNotification": {
+        "status": "SENT",
+        "recipientNumber": "9375322365",
+        "messageText": "Hello Rahul Gupta, your registration is successful! Your Token Number is ORTH-102. Doctor: Dr. Ananya Roy, MS. Date: 20 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "PulseQueue SMS Engine (Fast2SMS/MSG91 Ready)",
+        "messageId": "mock-sms-1795160505751-urm3",
+        "sentAt": "2026-11-20T07:41:45.751Z",
+        "retryCount": 1
+      }
+    },
+    {
+      "id": "ticket-1795154554927-4h1jo",
+      "ticketNumber": "GEN-109",
+      "patientName": "Bashudev Mardi",
+      "age": 24,
+      "gender": "Male",
+      "contactNumber": "9876417264",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "Cold Fever",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-20T06:02:34.927Z",
+      "calledTime": "2026-11-20T06:30:56.646Z",
+      "startTime": "2026-11-20T06:44:23.273Z",
+      "completedTime": "2026-11-20T07:05:58.682Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "doctorNotes": ""
+    },
+    {
+      "id": "ticket-1795158205040-b8k2x",
+      "ticketNumber": "CARD-103",
+      "patientName": "Nikhil",
+      "age": 32,
+      "gender": "Other",
+      "contactNumber": "798275973258",
+      "departmentId": "dept-cardio",
+      "doctorId": "doc-2",
+      "priority": "EMERGENCY",
+      "chiefComplaint": "Chest pain",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-20T07:03:25.040Z",
+      "calledTime": "2026-11-20T07:04:17.567Z",
+      "startTime": "2026-11-20T07:04:29.269Z",
+      "completedTime": "2026-11-20T07:04:50.540Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "doctorNotes": ""
+    },
+    {
+      "id": "ticket-1795158342950-zqzef",
+      "ticketNumber": "GEN-110",
+      "patientName": "Rakant",
+      "age": 20,
+      "gender": "Male",
+      "contactNumber": "687657836",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "Fever",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-20T07:05:42.950Z",
+      "calledTime": "2026-11-20T07:06:05.344Z",
+      "startTime": "2026-11-20T07:06:55.417Z",
+      "completedTime": "2026-11-20T07:07:33.799Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "holdReason": "X-ray",
+      "doctorNotes": ""
+    },
+    {
+      "id": "ticket-1795159453534-ms8jg",
+      "ticketNumber": "GEN-111",
+      "patientName": "Aditya kumar",
+      "age": 20,
+      "gender": "Male",
+      "contactNumber": "9330789026",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "TV",
+      "status": "NO_SHOW",
+      "checkInTime": "2026-11-20T07:24:13.534Z",
+      "calledTime": null,
+      "startTime": null,
+      "completedTime": null,
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "smsNotification": {
+        "status": "SENT",
+        "recipientNumber": "9330789026",
+        "messageText": "Hello Aditya kumar, your registration is successful! Your Token Number is GEN-111. Doctor: Dr. Rajesh Sharma, MD. Date: 20 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "PulseQueue SMS Engine (Fast2SMS/MSG91 Ready)",
+        "messageId": "mock-sms-1795159453711-7n0a",
+        "sentAt": "2026-11-20T07:24:13.711Z",
+        "retryCount": 0
+      }
+    },
+    {
+      "id": "ticket-1795160434274-0f1q2",
+      "ticketNumber": "GEN-112",
+      "patientName": "Aditya kumar",
+      "age": 20,
+      "gender": "Male",
+      "contactNumber": "N/A",
+      "email": "adityabhagat3150@gmail.com",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "TV",
+      "status": "NO_SHOW",
+      "checkInTime": "2026-11-20T07:40:34.274Z",
+      "calledTime": null,
+      "startTime": null,
+      "completedTime": null,
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "smsNotification": {
+        "status": "FAILED",
+        "recipientNumber": "N/A",
+        "messageText": "Hello Aditya kumar, your registration is successful! Your Token Number is GEN-112. Doctor: Dr. Rajesh Sharma, MD. Date: 20 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "validator",
+        "error": "Patient contact mobile number is missing or empty",
+        "retryCount": 1
+      },
+      "emailNotification": {
+        "status": "SENT",
+        "recipientEmail": "adityabhagat3150@gmail.com",
+        "subject": "Patient Registration Successful – Your Token Number",
+        "bodyText": "Hello Aditya kumar,\n\nYour registration has been completed successfully!\n\nYour Token Number: GEN-112\n\nDoctor Name: Dr. Rajesh Sharma, MD\n\nRegistration Date: 20 Nov 2026\n\nPlease keep your Token Number safe for your consultation.\n\nThank you!",
+        "provider": "PulseQueue Email Engine (Nodemailer / Gmail Ready)",
+        "messageId": "sim-email-1795160434276-j046tb@pulsequeue.local",
+        "sentAt": "2026-11-20T07:40:34.281Z",
+        "retryCount": 0
+      }
+    },
+    {
+      "id": "ticket-1795160916940-c1ecx",
+      "ticketNumber": "GEN-113",
+      "patientName": "Aditya kumar",
+      "age": 20,
+      "gender": "Male",
+      "contactNumber": "9330789026",
+      "email": "adityabhagat3150@gmail.com",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "General health consultation",
+      "status": "COMPLETED",
+      "checkInTime": "2026-11-20T07:48:36.940Z",
+      "calledTime": "2026-11-20T14:28:24.152Z",
+      "startTime": null,
+      "completedTime": "2026-11-20T17:12:56.111Z",
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 0,
+      "smsNotification": {
+        "status": "SENT",
+        "recipientNumber": "9330789026",
+        "messageText": "Hello Aditya kumar, your registration is successful! Your Token Number is GEN-113. Doctor: Dr. Rajesh Sharma, MD. Date: 20 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "PulseQueue SMS Engine (Fast2SMS/MSG91 Ready)",
+        "messageId": "mock-sms-1795160916966-dcik",
+        "sentAt": "2026-11-20T07:48:36.966Z",
+        "retryCount": 0
+      },
+      "emailNotification": {
+        "status": "SENT",
+        "recipientEmail": "adityabhagat3150@gmail.com",
+        "subject": "Patient Registration Successful – Your Token Number",
+        "bodyText": "Hello Aditya kumar,\n\nYour registration has been completed successfully!\n\nYour Token Number: GEN-113\n\nDoctor Name: Dr. Rajesh Sharma, MD\n\nRegistration Date: 20 Nov 2026\n\nPlease keep your Token Number safe for your consultation.\n\nThank you!",
+        "provider": "PulseQueue Email Engine (Nodemailer / Gmail Ready)",
+        "messageId": "sim-email-1795160916967-4xonmp@pulsequeue.local",
+        "sentAt": "2026-11-20T07:48:36.972Z",
+        "retryCount": 0
+      }
+    },
+    {
+      "id": "ticket-1795184709527-0waeq",
+      "ticketNumber": "GEN-114",
+      "patientName": "Rabindar bhagat",
+      "age": 42,
+      "gender": "Male",
+      "contactNumber": "N/A",
+      "email": "bhagatrabindra191@gmail.com",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "General health consultation",
+      "status": "CALLED",
+      "checkInTime": "2026-11-20T14:25:09.527Z",
+      "calledTime": "2026-11-20T17:12:56.111Z",
+      "startTime": null,
+      "completedTime": null,
+      "estimatedWaitMinutes": 0,
+      "queuePosition": 1,
+      "smsNotification": {
+        "status": "FAILED",
+        "recipientNumber": "N/A",
+        "messageText": "Hello Rabindar bhagat, your registration is successful! Your Token Number is GEN-114. Doctor: Dr. Rajesh Sharma, MD. Date: 20 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "validator",
+        "error": "Patient contact mobile number is missing or empty",
+        "retryCount": 0
+      },
+      "emailNotification": {
+        "status": "FAILED",
+        "recipientEmail": "bhagatrabindra191@gmail.com",
+        "subject": "Patient Registration Successful – Your Token Number",
+        "bodyText": "Hello Rabindar bhagat,\n\nYour registration has been completed successfully!\n\nYour Token Number: GEN-114\n\nDoctor Name: Dr. Rajesh Sharma, MD\n\nRegistration Date: 20 Nov 2026\n\nPlease keep your Token Number safe for your consultation.\n\nThank you!",
+        "provider": "Nodemailer SMTP",
+        "error": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1b5567ffa8csm7293613c88.7 - gsmtp",
+        "retryCount": 0
+      }
+    },
+    {
+      "id": "ticket-1795185064800-fabkn",
+      "ticketNumber": "GEN-115",
+      "patientName": "Aditya Kumar",
+      "age": 19,
+      "gender": "Male",
+      "contactNumber": "N/A",
+      "email": "bhagatrabindra191@gmail.com",
+      "departmentId": "dept-gen",
+      "doctorId": "doc-1",
+      "priority": "NORMAL",
+      "chiefComplaint": "General health consultation",
+      "status": "WAITING",
+      "checkInTime": "2026-11-20T14:31:04.800Z",
+      "calledTime": null,
+      "startTime": null,
+      "completedTime": null,
+      "estimatedWaitMinutes": 25,
+      "queuePosition": 2,
+      "smsNotification": {
+        "status": "FAILED",
+        "recipientNumber": "N/A",
+        "messageText": "Hello Aditya Kumar, your registration is successful! Your Token Number is GEN-115. Doctor: Dr. Rajesh Sharma, MD. Date: 20 Nov 2026. Please keep this number for your consultation. Thank you!",
+        "gateway": "validator",
+        "error": "Patient contact mobile number is missing or empty",
+        "retryCount": 0
+      },
+      "emailNotification": {
+        "status": "FAILED",
+        "recipientEmail": "bhagatrabindra191@gmail.com",
+        "subject": "Patient Registration Successful – Your Token Number",
+        "bodyText": "Hello Aditya Kumar,\n\nYour registration has been completed successfully!\n\nYour Token Number: GEN-115\n\nDoctor Name: Dr. Rajesh Sharma, MD\n\nRegistration Date: 20 Nov 2026\n\nPlease keep your Token Number safe for your consultation.\n\nThank you!",
+        "provider": "Nodemailer SMTP",
+        "error": "Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1b5567e495bsm10562192c88.4 - gsmtp",
+        "retryCount": 0
+      }
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1795195643539-rjhm",
+      "timestamp": "2026-11-20T17:27:23.539Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795195639931-m5iq",
+      "timestamp": "2026-11-20T17:27:19.931Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795195337120-535x",
+      "timestamp": "2026-11-20T17:22:17.120Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795195332065-j0tn",
+      "timestamp": "2026-11-20T17:22:12.065Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795194962401-jenh",
+      "timestamp": "2026-11-20T17:16:02.401Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795194921096-gq6d",
+      "timestamp": "2026-11-20T17:15:21.096Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795194776111-c5v1",
+      "timestamp": "2026-11-20T17:12:56.111Z",
+      "ticketId": "ticket-1795184709527-0waeq",
+      "ticketNumber": "GEN-114",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Rabindar bhagat (GEN-114) to Room 101. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795194776111-ui7q",
+      "timestamp": "2026-11-20T17:12:56.111Z",
+      "ticketId": "ticket-1795160916940-c1ecx",
+      "ticketNumber": "GEN-113",
+      "action": "CONSULTATION_COMPLETED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Completed session for Aditya kumar (GEN-113)"
+    },
+    {
+      "id": "log-1795194770137-l61c",
+      "timestamp": "2026-11-20T17:12:50.138Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795193917506-vhwy",
+      "timestamp": "2026-11-20T16:58:37.506Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 15 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795193912450-hr8w",
+      "timestamp": "2026-11-20T16:58:32.451Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795190516066-i0sb",
+      "timestamp": "2026-11-20T16:01:56.066Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795190514400-vi6f",
+      "timestamp": "2026-11-20T16:01:54.400Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795190428043-mm4e",
+      "timestamp": "2026-11-20T16:00:28.043Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795190394420-xs03",
+      "timestamp": "2026-11-20T15:59:54.420Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795190294544-r8op",
+      "timestamp": "2026-11-20T15:58:14.545Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795185074286-ml8r",
+      "timestamp": "2026-11-20T14:31:14.286Z",
+      "ticketId": "ticket-1795185064800-fabkn",
+      "ticketNumber": "GEN-115",
+      "action": "EMAIL_NOTIFICATION_FAILED",
+      "actor": "Email Notification Service",
+      "details": "Email delivery failed to bhagatrabindra191@gmail.com for Token GEN-115: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1b5567e495bsm10562192c88.4 - gsmtp"
+    },
+    {
+      "id": "log-1795185064801-v3pm",
+      "timestamp": "2026-11-20T14:31:04.801Z",
+      "ticketId": "ticket-1795185064800-fabkn",
+      "ticketNumber": "GEN-115",
+      "action": "SMS_NOTIFICATION_FAILED",
+      "actor": "SMS Notification Gateway",
+      "details": "SMS delivery failed to N/A for Token GEN-115: Patient contact mobile number is missing or empty"
+    },
+    {
+      "id": "log-1795185064800-habf",
+      "timestamp": "2026-11-20T14:31:04.800Z",
+      "ticketId": "ticket-1795185064800-fabkn",
+      "ticketNumber": "GEN-115",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Aditya Kumar (GEN-115) for General Medicine OPD. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795184922264-rwph",
+      "timestamp": "2026-11-20T14:28:42.264Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795184917778-37ps",
+      "timestamp": "2026-11-20T14:28:37.778Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795184904152-o2ac",
+      "timestamp": "2026-11-20T14:28:24.152Z",
+      "ticketId": "ticket-1795160916940-c1ecx",
+      "ticketNumber": "GEN-113",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Aditya kumar (GEN-113) to Room 101. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795184712114-5was",
+      "timestamp": "2026-11-20T14:25:12.115Z",
+      "ticketId": "ticket-1795184709527-0waeq",
+      "ticketNumber": "GEN-114",
+      "action": "EMAIL_NOTIFICATION_FAILED",
+      "actor": "Email Notification Service",
+      "details": "Email delivery failed to bhagatrabindra191@gmail.com for Token GEN-114: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1b5567ffa8csm7293613c88.7 - gsmtp"
+    },
+    {
+      "id": "log-1795184709558-6oz9",
+      "timestamp": "2026-11-20T14:25:09.558Z",
+      "ticketId": "ticket-1795184709527-0waeq",
+      "ticketNumber": "GEN-114",
+      "action": "SMS_NOTIFICATION_FAILED",
+      "actor": "SMS Notification Gateway",
+      "details": "SMS delivery failed to N/A for Token GEN-114: Patient contact mobile number is missing or empty"
+    },
+    {
+      "id": "log-1795184709527-j6t2",
+      "timestamp": "2026-11-20T14:25:09.527Z",
+      "ticketId": "ticket-1795184709527-0waeq",
+      "ticketNumber": "GEN-114",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Rabindar bhagat (GEN-114) for General Medicine OPD. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795181715481-gjtj",
+      "timestamp": "2026-11-20T13:35:15.481Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795163043941-o6on",
+      "timestamp": "2026-11-20T08:24:03.941Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795160916972-la9a",
+      "timestamp": "2026-11-20T07:48:36.972Z",
+      "ticketId": "ticket-1795160916940-c1ecx",
+      "ticketNumber": "GEN-113",
+      "action": "EMAIL_NOTIFICATION_SENT",
+      "actor": "Email Notification Service",
+      "details": "Sent registration email to adityabhagat3150@gmail.com for Token GEN-113 via PulseQueue Email Engine (Nodemailer / Gmail Ready)"
+    },
+    {
+      "id": "log-1795160916966-z27z",
+      "timestamp": "2026-11-20T07:48:36.966Z",
+      "ticketId": "ticket-1795160916940-c1ecx",
+      "ticketNumber": "GEN-113",
+      "action": "SMS_NOTIFICATION_SENT",
+      "actor": "SMS Notification Gateway",
+      "details": "Sent registration SMS to 9330789026 for Token GEN-113 via PulseQueue SMS Engine (Fast2SMS/MSG91 Ready)"
+    },
+    {
+      "id": "log-1795160916940-eo30",
+      "timestamp": "2026-11-20T07:48:36.940Z",
+      "ticketId": "ticket-1795160916940-c1ecx",
+      "ticketNumber": "GEN-113",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Aditya kumar (GEN-113) for General Medicine OPD. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795160512994-1naj",
+      "timestamp": "2026-11-20T07:41:52.994Z",
+      "ticketId": "ticket-1795160434274-0f1q2",
+      "ticketNumber": "GEN-112",
+      "action": "STATUS_NO_SHOW",
+      "actor": "Staff Member",
+      "details": "Ticket GEN-112 moved from WAITING to NO_SHOW"
+    },
+    {
+      "id": "log-1795160505751-xsbn",
+      "timestamp": "2026-11-20T07:41:45.751Z",
+      "ticketId": "ticket-1795154393079-ybjgd",
+      "ticketNumber": "ORTH-102",
+      "action": "SMS_RETRY_SENT",
+      "actor": "Staff / Patient Kiosk",
+      "details": "Resent registration SMS to 9375322365 for Rahul Gupta (ORTH-102) via PulseQueue SMS Engine (Fast2SMS/MSG91 Ready) (Attempt #1)"
+    },
+    {
+      "id": "log-1795160504366-5vi5",
+      "timestamp": "2026-11-20T07:41:44.366Z",
+      "ticketId": "ticket-demo-5",
+      "ticketNumber": "PED-401",
+      "action": "SMS_RETRY_SENT",
+      "actor": "Staff / Patient Kiosk",
+      "details": "Resent registration SMS to 9898011223 for Anvi Deshmukh (PED-401) via PulseQueue SMS Engine (Fast2SMS/MSG91 Ready) (Attempt #1)"
+    },
+    {
+      "id": "log-1795160502474-akmn",
+      "timestamp": "2026-11-20T07:41:42.474Z",
+      "ticketId": "ticket-demo-2",
+      "ticketNumber": "ORTH-201",
+      "action": "SMS_RETRY_SENT",
+      "actor": "Staff / Patient Kiosk",
+      "details": "Resent registration SMS to 9811256789 for Sunita Mehra (ORTH-201) via PulseQueue SMS Engine (Fast2SMS/MSG91 Ready) (Attempt #1)"
+    },
+    {
+      "id": "log-1795160490184-lukt",
+      "timestamp": "2026-11-20T07:41:30.184Z",
+      "ticketId": "ticket-1795160434274-0f1q2",
+      "ticketNumber": "GEN-112",
+      "action": "SMS_RETRY_FAILED",
+      "actor": "Staff / Patient Kiosk",
+      "details": "SMS retry failed to N/A for Token GEN-112: Patient contact mobile number is missing or empty"
+    },
+    {
+      "id": "log-1795160434282-84sr",
+      "timestamp": "2026-11-20T07:40:34.282Z",
+      "ticketId": "ticket-1795160434274-0f1q2",
+      "ticketNumber": "GEN-112",
+      "action": "EMAIL_NOTIFICATION_SENT",
+      "actor": "Email Notification Service",
+      "details": "Sent registration email to adityabhagat3150@gmail.com for Token GEN-112 via PulseQueue Email Engine (Nodemailer / Gmail Ready)"
+    },
+    {
+      "id": "log-1795160434275-mxdd",
+      "timestamp": "2026-11-20T07:40:34.275Z",
+      "ticketId": "ticket-1795160434274-0f1q2",
+      "ticketNumber": "GEN-112",
+      "action": "SMS_NOTIFICATION_FAILED",
+      "actor": "SMS Notification Gateway",
+      "details": "SMS delivery failed to N/A for Token GEN-112: Patient contact mobile number is missing or empty"
+    },
+    {
+      "id": "log-1795160434274-7wyr",
+      "timestamp": "2026-11-20T07:40:34.274Z",
+      "ticketId": "ticket-1795160434274-0f1q2",
+      "ticketNumber": "GEN-112",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Aditya kumar (GEN-112) for General Medicine OPD. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795159807959-kbcw",
+      "timestamp": "2026-11-20T07:30:07.959Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795159609584-vf3a",
+      "timestamp": "2026-11-20T07:26:49.584Z",
+      "ticketId": "ticket-1795159453534-ms8jg",
+      "ticketNumber": "GEN-111",
+      "action": "STATUS_NO_SHOW",
+      "actor": "Staff Member",
+      "details": "Ticket GEN-111 moved from WAITING to NO_SHOW"
+    },
+    {
+      "id": "log-1795159453711-2a49",
+      "timestamp": "2026-11-20T07:24:13.711Z",
+      "ticketId": "ticket-1795159453534-ms8jg",
+      "ticketNumber": "GEN-111",
+      "action": "SMS_NOTIFICATION_SENT",
+      "actor": "SMS Notification Gateway",
+      "details": "Sent registration SMS to 9330789026 for Token GEN-111 via PulseQueue SMS Engine (Fast2SMS/MSG91 Ready)"
+    },
+    {
+      "id": "log-1795159453534-8ff6",
+      "timestamp": "2026-11-20T07:24:13.534Z",
+      "ticketId": "ticket-1795159453534-ms8jg",
+      "ticketNumber": "GEN-111",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Aditya kumar (GEN-111) for General Medicine OPD. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795158453799-r9y6",
+      "timestamp": "2026-11-20T07:07:33.799Z",
+      "ticketId": "ticket-1795158342950-zqzef",
+      "ticketNumber": "GEN-110",
+      "action": "STATUS_COMPLETED",
+      "actor": "Staff Member",
+      "details": "Ticket GEN-110 moved from ON_HOLD to COMPLETED"
+    },
+    {
+      "id": "log-1795158421923-2z4j",
+      "timestamp": "2026-11-20T07:07:01.923Z",
+      "ticketId": "ticket-1795158342950-zqzef",
+      "ticketNumber": "GEN-110",
+      "action": "STATUS_ON_HOLD",
+      "actor": "Staff Member",
+      "details": "Ticket GEN-110 moved from IN_CONSULTATION to ON_HOLD"
+    },
+    {
+      "id": "log-1795158415417-hix2",
+      "timestamp": "2026-11-20T07:06:55.417Z",
+      "ticketId": "ticket-1795158342950-zqzef",
+      "ticketNumber": "GEN-110",
+      "action": "STATUS_IN_CONSULTATION",
+      "actor": "Staff Member",
+      "details": "Ticket GEN-110 moved from CALLED to IN_CONSULTATION"
+    },
+    {
+      "id": "log-1795158365344-9zm5",
+      "timestamp": "2026-11-20T07:06:05.344Z",
+      "ticketId": "ticket-1795158342950-zqzef",
+      "ticketNumber": "GEN-110",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Rakant (GEN-110) to Room 101. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795158358682-7a8o",
+      "timestamp": "2026-11-20T07:05:58.682Z",
+      "ticketId": "ticket-1795154554927-4h1jo",
+      "ticketNumber": "GEN-109",
+      "action": "STATUS_COMPLETED",
+      "actor": "Staff Member",
+      "details": "Ticket GEN-109 moved from IN_CONSULTATION to COMPLETED"
+    },
+    {
+      "id": "log-1795158342950-5ck7",
+      "timestamp": "2026-11-20T07:05:42.950Z",
+      "ticketId": "ticket-1795158342950-zqzef",
+      "ticketNumber": "GEN-110",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Rakant (GEN-110) for General Medicine OPD. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795158290540-swdp",
+      "timestamp": "2026-11-20T07:04:50.540Z",
+      "ticketId": "ticket-1795158205040-b8k2x",
+      "ticketNumber": "CARD-103",
+      "action": "STATUS_COMPLETED",
+      "actor": "Staff Member",
+      "details": "Ticket CARD-103 moved from IN_CONSULTATION to COMPLETED"
+    },
+    {
+      "id": "log-1795158269269-4jmp",
+      "timestamp": "2026-11-20T07:04:29.269Z",
+      "ticketId": "ticket-1795158205040-b8k2x",
+      "ticketNumber": "CARD-103",
+      "action": "STATUS_IN_CONSULTATION",
+      "actor": "Staff Member",
+      "details": "Ticket CARD-103 moved from CALLED to IN_CONSULTATION"
+    },
+    {
+      "id": "log-1795158257567-wc09",
+      "timestamp": "2026-11-20T07:04:17.567Z",
+      "ticketId": "ticket-1795158205040-b8k2x",
+      "ticketNumber": "CARD-103",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Priya Nambiar, MD, DM",
+      "details": "Called Nikhil (CARD-103) to Room 201. Priority: EMERGENCY"
+    },
+    {
+      "id": "log-1795158257567-0bvk",
+      "timestamp": "2026-11-20T07:04:17.567Z",
+      "ticketId": "ticket-demo-4",
+      "ticketNumber": "CARD-301",
+      "action": "CONSULTATION_COMPLETED",
+      "actor": "Dr. Priya Nambiar, MD, DM",
+      "details": "Completed session for Deepak Joshi (CARD-301)"
+    },
+    {
+      "id": "log-1795158205041-xk4g",
+      "timestamp": "2026-11-20T07:03:25.041Z",
+      "ticketId": "ticket-1795158205040-b8k2x",
+      "ticketNumber": "CARD-103",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Nikhil (CARD-103) for Cardiology Care. Priority: EMERGENCY"
+    },
+    {
+      "id": "log-1795157720709-wwd4",
+      "timestamp": "2026-11-20T06:55:20.709Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 10 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795157523438-hthx",
+      "timestamp": "2026-11-20T06:52:03.438Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795157511428-erwa",
+      "timestamp": "2026-11-20T06:51:51.429Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795157148619-wykn",
+      "timestamp": "2026-11-20T06:45:48.619Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Ananya Roy, MS",
+      "details": "Updated delay to 0 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795157148619-aayb",
+      "timestamp": "2026-11-20T06:45:48.619Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Ananya Roy, MS",
+      "details": "Set status to ACTIVE in Room 110. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795157063273-80bm",
+      "timestamp": "2026-11-20T06:44:23.273Z",
+      "ticketId": "ticket-1795154554927-4h1jo",
+      "ticketNumber": "GEN-109",
+      "action": "STATUS_IN_CONSULTATION",
+      "actor": "Staff Member",
+      "details": "Ticket GEN-109 moved from CALLED to IN_CONSULTATION"
+    },
+    {
+      "id": "log-1795156977645-mfd6",
+      "timestamp": "2026-11-20T06:42:57.645Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 0 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795156977645-b15i",
+      "timestamp": "2026-11-20T06:42:57.645Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795156954816-s755",
+      "timestamp": "2026-11-20T06:42:34.816Z",
+      "action": "BROADCAST_ANNOUNCEMENT",
+      "actor": "Hospital Operations",
+      "details": "Posted announcement: \"All doctors are in leave\""
+    },
+    {
+      "id": "log-1795156256646-0fnb",
+      "timestamp": "2026-11-20T06:30:56.646Z",
+      "ticketId": "ticket-1795154554927-4h1jo",
+      "ticketNumber": "GEN-109",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Bashudev Mardi (GEN-109) to Room 101. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795154554928-fn86",
+      "timestamp": "2026-11-20T06:02:34.928Z",
+      "ticketId": "ticket-1795154554927-4h1jo",
+      "ticketNumber": "GEN-109",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Bashudev Mardi (GEN-109) for General Medicine OPD. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795154419796-504x",
+      "timestamp": "2026-11-20T06:00:19.796Z",
+      "ticketId": "ticket-1795154290769-xh4b2",
+      "ticketNumber": "CARD-102",
+      "action": "STATUS_NO_SHOW",
+      "actor": "Staff Member",
+      "details": "Ticket CARD-102 moved from WAITING to NO_SHOW"
+    },
+    {
+      "id": "log-1795154393079-7iv2",
+      "timestamp": "2026-11-20T05:59:53.079Z",
+      "ticketId": "ticket-1795154393079-ybjgd",
+      "ticketNumber": "ORTH-102",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Rahul Gupta (ORTH-102) for Orthopedics & Trauma. Priority: SENIOR_CITIZEN"
+    },
+    {
+      "id": "log-1795154290769-mw03",
+      "timestamp": "2026-11-20T05:58:10.769Z",
+      "ticketId": "ticket-1795154290769-xh4b2",
+      "ticketNumber": "CARD-102",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Akshay Kumar (CARD-102) for Cardiology Care. Priority: URGENT"
+    },
+    {
+      "id": "log-1795154115390-nyzo",
+      "timestamp": "2026-11-20T05:55:15.390Z",
+      "ticketId": "ticket-1795154059901-znxfd",
+      "ticketNumber": "GEN-108",
+      "action": "CONSULTATION_COMPLETED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Completed session for Lucky kumar (GEN-108)"
+    },
+    {
+      "id": "log-1795154104242-sih8",
+      "timestamp": "2026-11-20T05:55:04.242Z",
+      "ticketId": "ticket-1795154059901-znxfd",
+      "ticketNumber": "GEN-108",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Lucky kumar (GEN-108) to Room 101. Priority: EMERGENCY"
+    },
+    {
+      "id": "log-1795154104242-1q1m",
+      "timestamp": "2026-11-20T05:55:04.242Z",
+      "ticketId": "ticket-1795095375764-2zihs",
+      "ticketNumber": "GEN-107",
+      "action": "CONSULTATION_COMPLETED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Completed session for Rohit Sen (GEN-107)"
+    },
+    {
+      "id": "log-1795154059902-k08a",
+      "timestamp": "2026-11-20T05:54:19.902Z",
+      "ticketId": "ticket-1795154059901-znxfd",
+      "ticketNumber": "GEN-108",
+      "action": "PATIENT_CHECKED_IN",
+      "actor": "Reception Desk / Self Kiosk",
+      "details": "Checked in Lucky kumar (GEN-108) for General Medicine OPD. Priority: EMERGENCY"
+    },
+    {
+      "id": "log-1795151786079-6mxv",
+      "timestamp": "2026-11-20T05:16:26.079Z",
+      "ticketId": "ticket-1795095375764-2zihs",
+      "ticketNumber": "GEN-107",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Rohit Sen (GEN-107) to Room 101. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795151786079-mzx1",
+      "timestamp": "2026-11-20T05:16:26.079Z",
+      "ticketId": "ticket-1795094969556-jrxgp",
+      "ticketNumber": "GEN-106",
+      "action": "CONSULTATION_COMPLETED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Completed session for Rohit Sen (GEN-106)"
+    },
+    {
+      "id": "log-1795151642248-0o2n",
+      "timestamp": "2026-11-20T05:14:02.248Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795151626109-dcze",
+      "timestamp": "2026-11-20T05:13:46.109Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 15 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795151618556-b8kv",
+      "timestamp": "2026-11-20T05:13:38.556Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795151617908-glzm",
+      "timestamp": "2026-11-20T05:13:37.908Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795151545144-g8vw",
+      "timestamp": "2026-11-20T05:12:25.144Z",
+      "ticketId": "ticket-1795094969556-jrxgp",
+      "ticketNumber": "GEN-106",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Rohit Sen (GEN-106) to Room 101. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795151545143-bz7y",
+      "timestamp": "2026-11-20T05:12:25.143Z",
+      "ticketId": "ticket-1795094210328-m0chs",
+      "ticketNumber": "GEN-104",
+      "action": "CONSULTATION_COMPLETED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Completed session for Arjun Kapoor (GEN-104)"
+    },
+    {
+      "id": "log-1795104065488-t3ck",
+      "timestamp": "2026-11-19T16:01:05.488Z",
+      "ticketId": "ticket-1795094210328-m0chs",
+      "ticketNumber": "GEN-104",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Arjun Kapoor (GEN-104) to Room 101. Priority: NORMAL"
+    },
+    {
+      "id": "log-1795104065485-ajtc",
+      "timestamp": "2026-11-19T16:01:05.485Z",
+      "ticketId": "ticket-1795094212497-xmho7",
+      "ticketNumber": "GEN-105",
+      "action": "CONSULTATION_COMPLETED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Completed session for Devendra Singhania (CRITICAL) (GEN-105)"
+    },
+    {
+      "id": "log-1795103553628-xtrs",
+      "timestamp": "2026-11-19T15:52:33.628Z",
+      "ticketId": "ticket-1795094212497-xmho7",
+      "ticketNumber": "GEN-105",
+      "action": "PATIENT_CALLED",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Called Devendra Singhania (CRITICAL) (GEN-105) to Room 101. Priority: EMERGENCY"
+    },
+    {
+      "id": "log-1795103109957-he2f",
+      "timestamp": "2026-11-19T15:45:09.957Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 15 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795103100431-b3te",
+      "timestamp": "2026-11-19T15:45:00.431Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795103081306-n4sw",
+      "timestamp": "2026-11-19T15:44:41.306Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795103081231-xw80",
+      "timestamp": "2026-11-19T15:44:41.231Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795103053773-utl5",
+      "timestamp": "2026-11-19T15:44:13.773Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ACTIVE in Room Room 101. Doctor is ready for consultations."
+    },
+    {
+      "id": "log-1795103053593-noci",
+      "timestamp": "2026-11-19T15:44:13.593Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795102689705-tqhd",
+      "timestamp": "2026-11-19T15:38:09.705Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795102563633-9dpo",
+      "timestamp": "2026-11-19T15:36:03.633Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 10 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795102556034-ev17",
+      "timestamp": "2026-11-19T15:35:56.034Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 10 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795102547545-ffi3",
+      "timestamp": "2026-11-19T15:35:47.545Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 10 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795102534467-op74",
+      "timestamp": "2026-11-19T15:35:34.467Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 15 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795102525425-ufio",
+      "timestamp": "2026-11-19T15:35:25.425Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 15 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795102517402-uoml",
+      "timestamp": "2026-11-19T15:35:17.402Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 15 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795102508252-9awk",
+      "timestamp": "2026-11-19T15:35:08.252Z",
+      "action": "DOCTOR_DELAY_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Updated delay to 15 minutes. Reason: Emergency clinical review"
+    },
+    {
+      "id": "log-1795102498184-y30d",
+      "timestamp": "2026-11-19T15:34:58.184Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795102485373-lv4f",
+      "timestamp": "2026-11-19T15:34:45.373Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795102467618-j18c",
+      "timestamp": "2026-11-19T15:34:27.619Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room Room 101. Consultations temporarily paused."
+    },
+    {
+      "id": "log-1795102462393-qzx5",
+      "timestamp": "2026-11-19T15:34:22.393Z",
+      "action": "DOCTOR_STATUS_UPDATE",
+      "actor": "Dr. Rajesh Sharma, MD",
+      "details": "Set status to ON_BREAK in Room Room 101. Consultations temporarily paused."
+    }
+  ],
+  "announcements": [
+    {
+      "id": "ann-1795193917506",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~15 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-20T16:58:37.506Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795157720709",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~10 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-20T06:55:20.709Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795156954816",
+      "message": "All doctors are in leave",
+      "severity": "info",
+      "createdAt": "2026-11-20T06:42:34.816Z"
+    },
+    {
+      "id": "ann-1795151626108",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~15 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-20T05:13:46.108Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795103109957",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~15 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:45:09.957Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795102563633",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~10 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:36:03.633Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795102556034",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~10 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:35:56.034Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795102547545",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~10 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:35:47.545Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795102534467",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~15 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:35:34.467Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795102525425",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~15 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:35:25.425Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795102517402",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~15 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:35:17.402Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1795102508252",
+      "message": "Dr. Rajesh Sharma, MD (General Medicine OPD, Room 101) is delayed by ~15 minutes: Emergency clinical review",
+      "severity": "warning",
+      "createdAt": "2026-11-19T15:35:08.252Z",
+      "departmentId": "dept-gen"
+    },
+    {
+      "id": "ann-1",
+      "message": "Dr. Priya Nambiar (Cardiology, Room 201) is delayed by ~15 mins due to urgent CCU ward rounds.",
+      "severity": "warning",
+      "createdAt": "2026-11-19T06:10:56.646Z",
+      "departmentId": "dept-cardio"
+    },
+    {
+      "id": "ann-2",
+      "message": "Senior citizens and emergency triage cases are given automated priority in queue scheduling.",
+      "severity": "info",
+      "createdAt": "2026-11-19T05:40:56.646Z"
+    }
+  ]
+}
