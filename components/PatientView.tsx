@@ -17,11 +17,7 @@ import {
   QrCode, 
   ShieldAlert, 
   BellRing,
-  Sparkles,
-  ArrowRight,
-  UserCheck,
   RotateCw,
-  Phone,
   Mail
 } from 'lucide-react';
 

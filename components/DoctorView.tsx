@@ -50,13 +50,6 @@ export default function DoctorView({
   const [isCallingNext, setIsCallingNext] = useState(false);
   const [isUpdatingStatus, setIsUpdatingStatus] = useState(false);
 
-  // Keep selectedDoctorId in sync when doctors load or change
-  useEffect(() => {
-    if ((!selectedDoctorId || !doctors.some(d => d.id === selectedDoctorId)) && doctors.length > 0) {
-      setSelectedDoctorId(doctors[0].id);
-    }
-  }, [doctors, selectedDoctorId]);
-
   const selectedDoctor = doctors.find(d => d.id === selectedDoctorId) || doctors[0];
   const doctorDept = selectedDoctor ? departments.find(d => d.id === selectedDoctor.departmentId) : null;
 

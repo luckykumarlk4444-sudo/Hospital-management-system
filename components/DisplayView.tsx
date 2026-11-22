@@ -15,7 +15,7 @@ import {
   Activity,
   Sparkles
 } from 'lucide-react';
-import { playHospitalChime, announcePatientCall, unlockAudio } from '@/lib/audio';
+import { announcePatientCall, unlockAudio } from '@/lib/audio';
 
 interface DisplayViewProps {
   doctors: Doctor[];

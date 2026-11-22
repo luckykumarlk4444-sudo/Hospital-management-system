@@ -1,5 +1,3 @@
-import type { SMSNotificationRecord } from './types';
-
 export interface SendSMSParams {
   ticketId: string;
   patientName: string;

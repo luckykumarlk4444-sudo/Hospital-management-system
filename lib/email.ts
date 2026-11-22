@@ -1,5 +1,4 @@
 import nodemailer from 'nodemailer';
-import type { EmailNotificationRecord } from './types';
 
 export interface SendEmailParams {
   ticketId: string;
@@ -230,7 +229,6 @@ function getEmailTransporter() {
  */
 export async function sendRegistrationEmail(params: SendEmailParams): Promise<EmailDispatchResult> {
   const {
-    ticketId,
     patientName,
     tokenNumber,
     email,

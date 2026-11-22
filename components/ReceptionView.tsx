@@ -19,11 +19,8 @@ import {
   Megaphone,
   Eye,
   Filter,
-  Sparkles,
   Phone,
-  AlertCircle,
   RotateCw,
-  Mail,
   Volume2
 } from 'lucide-react';
 import { announcePatientCall, unlockAudio } from '@/lib/audio';
